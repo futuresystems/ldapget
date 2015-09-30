@@ -16,7 +16,7 @@ Available options:
   --version                Show version
   --help                   Show this help text
   -h,--host HOST           Hostname of the LDAP server (default: "localhost")
-  -p,--port PORT           Port on the LDAP server to connect to (default: 938)
+  -p,--port PORT           Port on the LDAP server to connect to (default: 389)
   -d,--dn DN               LDAP Distinguished
                            Name (default: "dc=futuregrid,dc=org")
   -P,--project PROJECT     Project ID

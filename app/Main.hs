@@ -96,7 +96,7 @@ params = Params
                 short 'p'
                 <> long "port"
                 <> metavar "PORT"
-                <> value 938
+                <> value 389
                 <> showDefault
                 <> help "Port on the LDAP server to connect to"))
          <*> (fmap (Dn . T.pack)
