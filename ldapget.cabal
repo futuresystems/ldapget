@@ -1,0 +1,52 @@
+name:                ldapget
+version:             0.1.0.0
+synopsis:            Get values from LDAP
+description:         Please see README.md
+homepage:            http://github.com/futuresystems/ldapget#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Badi' Abdul-Wahid
+maintainer:          abdulwahidc@gmail.com
+copyright:           2015
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , hashable
+                     , ldap-client
+                     , semigroups
+                     , text
+  default-language:    Haskell2010
+
+executable ldapget
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -static -optl=-static -fPIC
+  build-depends:       base
+                     , bytestring
+                     , directory
+                     , filepath
+                     , ldapget
+                     , optparse-simple
+                     , text
+                     , unordered-containers
+  default-language:    Haskell2010
+
+-- test-suite ldap-test
+--   type:                exitcode-stdio-1.0
+--   hs-source-dirs:      test
+--   main-is:             Spec.hs
+--   build-depends:       base
+--                      , ldap
+--   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+--   default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/futuresystems/ldapget
