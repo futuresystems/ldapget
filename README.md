@@ -56,7 +56,7 @@ First: forward `ldap:389` to `proxy:9389`:
 user@proxy $ ssh -g -L \*:9389:ldap:389 localhost -v
 ```
 
-Next: forward the port the the `local` machine:
+Next: forward the port to the `local` machine:
 
 ```
 user@proxy $ ssh -g -R 9389:localhost:9389 local -v
